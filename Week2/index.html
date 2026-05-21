@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-        <body>
-            <h1>Week 2</h1>
-            <p>In this week, we will learn about the basics of HTML and CSS. We will cover topics such as:</p>
-            <ul>
-                <li>HTML structure and elements</li>
-                <li>CSS styling and selectors</li>
-                <li>Responsive design principles</li>
-            </ul>
-            <p>By the end of this week, you should have a good understanding of how to create and style a basic webpage using HTML and CSS.</p>
-        </body>
-    </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label,
+        input {
+            margin: 10px 0;
+        }
+
+        label[for="username"],
+        label[for="password"] {
+            display: inline-block;
+            width: 80px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 10px 0;
+        }
+
+        label input {
+            display: inline;
+            margin: 0 5px 0 0;
+        }
+
+        @media (max-width: 600px) {
+            label[for="username"],
+            label[for="password"] {
+                display: block;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form>
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text" required><br>
+
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" required><br>
+
+        <label>
+            <input id="showPassword" type="checkbox">
+            Show password
+        </label>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
